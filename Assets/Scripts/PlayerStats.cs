@@ -6,6 +6,7 @@ public class PlayerStats : MonoBehaviour
 {
     public int health;
     public Rigidbody2D rigBody;
+    public float recoilVelocity;
     
     void Start()
     {
@@ -13,30 +14,27 @@ public class PlayerStats : MonoBehaviour
         health = 3;
     }
 
-    void Update()
-    {
-        
-    }
-
     public void Hurt()
     {
         health--;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        //Check if the collision is with a player object
-        ContactPoint2D[] point = collision.contacts;
+        if (other.collider.tag == "Player")
         {
-            if (point[0].normal.y >= 0.9f)
+            ContactPoint2D[] point = other.contacts;
             {
-                rigBody.AddForce(new Vector2(0f, 1050f));
-                Debug.Log("You have bopped");
-            }
-            else if (point[0].normal.y <= -0.9f)
-            {
-                Debug.Log("You have been bopped");
-                Hurt();
+                if (point[0].normal.y >= 0.9f)
+                {
+                    rigBody.AddForce(new Vector2(0f, recoilVelocity));
+                    Debug.Log("You have bopped");
+                }
+                else if (point[0].normal.y <= -0.9f)
+                {
+                    Debug.Log("You have been bopped");
+                    Hurt();
+                }
             }
         }
     }

@@ -69,6 +69,7 @@
     <Compile Include="Assets\Demo\Scripts\Saw.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerStats.cs" />
+    <Compile Include="Assets\Scripts\TheVoid.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/sebas/Documents/GitHub/Boxing/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
