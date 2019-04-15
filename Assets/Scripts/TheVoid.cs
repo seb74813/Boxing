@@ -10,4 +10,5 @@ public class TheVoid : MonoBehaviour
         {
             //Hurt player
         }
+    }
 }
