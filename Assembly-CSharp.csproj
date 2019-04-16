@@ -67,6 +67,7 @@
     <Compile Include="Assets\Demo\Scripts\Portal.cs" />
     <Compile Include="Assets\Demo\Scripts\RestartLevel.cs" />
     <Compile Include="Assets\Demo\Scripts\Saw.cs" />
+    <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerStats.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">

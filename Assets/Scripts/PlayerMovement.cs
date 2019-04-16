@@ -8,20 +8,37 @@ public class PlayerMovement : MonoBehaviour {
  public Animator animator;
 
     public float runSpeed = 40f;
-
+    public int player;
     float horizontalMove = 0f;
     bool jump = false;
+    string horizontal, up, special;
+
+    private void Start()
+    {
+        if (player == 1)
+        {
+            horizontal = "Horizontal";
+            up = "Jump";
+            special = "Fire1";
+        }
+        if (player == 2)
+        {
+            horizontal = "Horizontal2";
+            up = "Jump2";
+            special = "Fire2";
+        }
+    }
 
 
 	// Update is called once per frame
     
 	void Update () {
 
-       horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+       horizontalMove = Input.GetAxisRaw(horizontal) * runSpeed;
 
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
         
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown(up))
         {
             jump = true;
             animator.SetBool("Jump", true);

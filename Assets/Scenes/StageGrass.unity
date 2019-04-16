@@ -112,6 +112,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &412473 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5209354696443056265, guid: eef7a155f308b674a882d36c0b6ec0e7,
+    type: 3}
+  m_PrefabInstance: {fileID: 5209354696311231005}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &17137285
 GameObject:
   m_ObjectHideFlags: 0
@@ -583,7 +589,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &180316206
 Transform:
   m_ObjectHideFlags: 0
@@ -659,6 +665,65 @@ MonoBehaviour:
   - {fileID: 1092734233}
   fullHeart: {fileID: 21300000, guid: 657b45f1b0655984483d36dc51c6cbc6, type: 3}
   emptyheart: {fileID: 21300000, guid: 0f70564c5f080034c9f6146dc25ae52e, type: 3}
+--- !u!114 &197699809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 197699807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6bad2c89a3d40643a52a29fb5a3b8fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_JumpForce: 1050
+  m_CrouchSpeed: 0.36
+  m_MovementSmoothing: 0.05
+  m_AirControl: 1
+  m_WhatIsGround:
+    serializedVersion: 2
+    m_Bits: 1335
+  m_GroundCheck: {fileID: 500349051}
+  m_CeilingCheck: {fileID: 412473}
+  m_CrouchDisableCollider: {fileID: 0}
+  OnLandEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 197699810}
+        m_MethodName: OnLanding
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  OnCrouchEvent:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: CharacterController2D+BoolEvent, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &197699810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 197699807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52f8565c71a965488298f0eae41b33e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 197699809}
+  animator: {fileID: 0}
+  runSpeed: 40
+  player: 2
 --- !u!1 &218475559
 GameObject:
   m_ObjectHideFlags: 0
@@ -2412,6 +2477,12 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!4 &500349051 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5209354696439811553, guid: eef7a155f308b674a882d36c0b6ec0e7,
+    type: 3}
+  m_PrefabInstance: {fileID: 5209354696311231005}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -8368,5 +8439,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 0f70564c5f080034c9f6146dc25ae52e,
         type: 3}
+    - target: {fileID: 7959680353510022069, guid: f6260f8139fe5dd49aab14d34caacc2e,
+        type: 3}
+      propertyPath: player
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6260f8139fe5dd49aab14d34caacc2e, type: 3}
