@@ -8,6 +8,7 @@ public class PlayerStats : MonoBehaviour
     public int health, numOfHearts;
     Rigidbody2D rigBody;
     public float recoilVelocity;
+    public GameObject spawnPoint;
 
     public Image[] hearts;
     public Sprite fullHeart, emptyheart;
@@ -15,10 +16,6 @@ public class PlayerStats : MonoBehaviour
     void Start()
     {
         rigBody = GetComponent<Rigidbody2D>();
-    }
-
-    void Update()
-    {
         if (health > numOfHearts)
         {
             health = numOfHearts;
@@ -48,6 +45,52 @@ public class PlayerStats : MonoBehaviour
     public void Hurt()
     {
         health--;
+        for (int i = 0; i < hearts.Length; i++)
+        {
+            if (i < health)
+            {
+                hearts[i].sprite = fullHeart;
+            }
+            else
+            {
+                hearts[i].sprite = emptyheart;
+            }
+
+            if (i < numOfHearts)
+            {
+                hearts[i].enabled = true;
+            }
+            else
+            {
+                hearts[i].enabled = false;
+            }
+        }
+    }
+    public void Void()
+    {
+        health--;
+        for (int i = 0; i < hearts.Length; i++)
+        {
+            if (i < health)
+            {
+                hearts[i].sprite = fullHeart;
+            }
+            else
+            {
+                hearts[i].sprite = emptyheart;
+            }
+
+            if (i < numOfHearts)
+            {
+                hearts[i].enabled = true;
+            }
+            else
+            {
+                hearts[i].enabled = false;
+            }
+        }
+        this.transform.position = new Vector2(0.0f, 0.0f);
+        Debug.Log("Player has fallen off map");
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -67,6 +110,10 @@ public class PlayerStats : MonoBehaviour
                     Hurt();
                 }
             }
+        }
+        if (other.collider.tag == "Void")
+        {
+            Void();
         }
     }
 }
