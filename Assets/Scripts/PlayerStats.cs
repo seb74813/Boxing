@@ -8,7 +8,8 @@ public class PlayerStats : MonoBehaviour
     public int health, numOfHearts;
     Rigidbody2D rigBody;
     public float recoilVelocity;
-    public GameObject spawnPoint;
+    public PlayerMovement playerMovement;
+    public SpecialMoveBase specialScript;
 
     public Image[] hearts;
     public Sprite fullHeart, emptyheart;
@@ -16,6 +17,20 @@ public class PlayerStats : MonoBehaviour
     void Start()
     {
         rigBody = GetComponent<Rigidbody2D>();
+        Health();
+        
+    }
+
+    private void Update()
+    {
+        if (Input.GetButtonDown(playerMovement.special))
+        {
+            specialScript.Fire();
+        }
+    }
+
+    public void Health()
+    {
         if (health > numOfHearts)
         {
             health = numOfHearts;
@@ -45,50 +60,12 @@ public class PlayerStats : MonoBehaviour
     public void Hurt()
     {
         health--;
-        for (int i = 0; i < hearts.Length; i++)
-        {
-            if (i < health)
-            {
-                hearts[i].sprite = fullHeart;
-            }
-            else
-            {
-                hearts[i].sprite = emptyheart;
-            }
-
-            if (i < numOfHearts)
-            {
-                hearts[i].enabled = true;
-            }
-            else
-            {
-                hearts[i].enabled = false;
-            }
-        }
+        Health();
     }
     public void Void()
     {
         health--;
-        for (int i = 0; i < hearts.Length; i++)
-        {
-            if (i < health)
-            {
-                hearts[i].sprite = fullHeart;
-            }
-            else
-            {
-                hearts[i].sprite = emptyheart;
-            }
-
-            if (i < numOfHearts)
-            {
-                hearts[i].enabled = true;
-            }
-            else
-            {
-                hearts[i].enabled = false;
-            }
-        }
+        Health();
         this.transform.position = new Vector2(0.0f, 0.0f);
         Debug.Log("Player has fallen off map");
     }

@@ -61,15 +61,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Boxing Game\Players\CharacterController2D.cs" />
     <Compile Include="Assets\Demo\Scripts\CameraControlla.cs" />
     <Compile Include="Assets\Demo\Scripts\Player.cs" />
     <Compile Include="Assets\Demo\Scripts\Portal.cs" />
     <Compile Include="Assets\Demo\Scripts\RestartLevel.cs" />
     <Compile Include="Assets\Demo\Scripts\Saw.cs" />
+    <Compile Include="Assets\Scripts\CharacterController2D.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerStats.cs" />
+    <Compile Include="Assets\Scripts\SpecialMoves\Fireball.cs" />
+    <Compile Include="Assets\Scripts\SpecialMoves\SpecialMoveBase.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/sebas/Documents/GitHub/Boxing/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
