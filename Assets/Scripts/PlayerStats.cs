@@ -27,6 +27,10 @@ public class PlayerStats : MonoBehaviour
         {
             specialScript.Fire();
         }
+        if (health <= 0)
+        {
+            GameController.Win();
+        }
     }
 
     public void Health()
