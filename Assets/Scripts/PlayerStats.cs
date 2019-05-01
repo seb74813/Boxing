@@ -9,7 +9,7 @@ public class PlayerStats : MonoBehaviour
     Rigidbody2D rigBody;
     public float recoilVelocity;
     public PlayerMovement playerMovement;
-    public SpecialMoveBase specialScript;
+    
 
     public Image[] hearts;
     public Sprite fullHeart, emptyheart;
@@ -25,7 +25,7 @@ public class PlayerStats : MonoBehaviour
     {
         if (Input.GetButtonDown(playerMovement.special))
         {
-            specialScript.Fire();
+            
         }
     }
 
