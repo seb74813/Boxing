@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpecialMoveBase : MonoBehaviour
 {
-    public virtual void Special()
+    public virtual void Fire()
     {
 
     }
