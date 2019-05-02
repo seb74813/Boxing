@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Fireball : SpecialMoveBase
 {
-    public override void Fire()
+    public override void Special()
     {
         
     }

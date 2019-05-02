@@ -1,18 +1,51 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public Text timerText;
+    public float mainTimer;
+    public GameObject spawn1, spawn2;
+    private float timer;
+    private bool canCount = true;
+    private GameObject player1, player2;
+    [SerializeField] private List<GameObject> players = new List<GameObject>();
+
+
     void Start()
     {
-        
+        timer = mainTimer;
+        foreach (GameObject player in players)
+        {
+            if (player.name == PlayerPrefs.GetString("Player1"))
+            {
+                player1 = Instantiate(player);
+                player1.transform.position = new Vector2(-3, 2);
+            }
+            if (player.name == PlayerPrefs.GetString("Player2"))
+            {
+                player2 = Instantiate(player);
+                player2.transform.position = new Vector2(3, 2);
+            }
+        }
     }
 
-    // Update is called once per frame
+
     void Update()
     {
-        
+        if (timer >= 0.0f && canCount)
+        {
+            timer -= Time.deltaTime;
+            timerText.text = timer.ToString("F");
+        }
+
+        else if (timer <= 0.0f)
+        {
+            canCount = false;
+            timerText.text = "0.0f";
+            timer = 0.0f;
+        }
     }
 }
