@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerBase : MonoBehaviour
 {
@@ -44,7 +45,7 @@ public class PlayerBase : MonoBehaviour
             hearts[0] = heart1;
             hearts[1] = heart2;
             hearts[2] = heart3;
-            Health();
+            player = 1;
         }
         if ((PlayerPrefs.GetString("Player2") + "(Clone)") == this.name)
         {
@@ -60,9 +61,11 @@ public class PlayerBase : MonoBehaviour
             hearts[0] = heart1;
             hearts[1] = heart2;
             hearts[2] = heart3;
-            Health();
+            player = 2;
         }
         rigBody = GetComponent<Rigidbody2D>();
+        health = 3;
+        numOfHearts = 3;
         Health();
         
     }
@@ -100,6 +103,18 @@ public class PlayerBase : MonoBehaviour
         if (health > numOfHearts)
         {
             health = numOfHearts;
+        }
+        else if (health <= 0)
+        {
+            if (player == 1)
+            {
+                PlayerPrefs.SetInt("Winner", 2);
+            }
+            if (player == 2)
+            {
+                PlayerPrefs.SetInt("Winner", 1);
+            }
+            SceneManager.LoadScene("WinScreen");
         }
         for (int i = 0; i < hearts.Length; i++)
         {
