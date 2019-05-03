@@ -20,6 +20,12 @@ public class PlayerBase : MonoBehaviour
     [SerializeField] private float horizontalMove = 0f;
     [SerializeField] private bool jump = false;
     [SerializeField] private string horizontal, up, special;
+    [SerializeField] private float coolDown;
+    [SerializeField] private Transform coolDownLoc;
+    [SerializeField] private GameObject coolDownEffect;
+    private bool cooledDown;
+    private float nextFireTime;
+
 
     [Header("Health System")]
     [SerializeField] private int health;
@@ -67,7 +73,6 @@ public class PlayerBase : MonoBehaviour
         health = 3;
         numOfHearts = 3;
         Health();
-        
     }
 
     private void Update()
@@ -80,9 +85,21 @@ public class PlayerBase : MonoBehaviour
             jump = true;
             animator.SetBool("Jump", true);
         }
-        if (Input.GetButtonDown(special))
+        if (Time.time > nextFireTime)
         {
-            specialMove.Special();
+            if (cooledDown == false)
+            {
+                Instantiate(coolDownEffect, coolDownLoc.position, coolDownLoc.rotation);
+                cooledDown = true;
+            }
+            if (Input.GetButtonDown(special))
+            {
+                specialMove.Special();
+                Debug.Log("Fired");
+                Debug.Log("Cool Down Count");
+                nextFireTime = Time.time + coolDown;
+                cooledDown = false;
+            }
         }
         #endregion
     }
@@ -140,7 +157,7 @@ public class PlayerBase : MonoBehaviour
         }
     }
 
-    private void Hurt()
+    public void Hurt()
     {
         health--;
         Health();

@@ -69,11 +69,14 @@
     <Compile Include="Assets\Scripts\ChangeScene.cs" />
     <Compile Include="Assets\Scripts\CharacterController2D.cs" />
     <Compile Include="Assets\Scripts\CharacterSelection.cs" />
+    <Compile Include="Assets\Scripts\CoolDownEffectController.cs" />
+    <Compile Include="Assets\Scripts\FireballController.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\PlayerBase.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\SpecialMoves\Fireball.cs" />
     <Compile Include="Assets\Scripts\SpecialMoves\SpecialMoveBase.cs" />
+    <Compile Include="Assets\Scripts\SpecialMoves\Stun.cs" />
     <Compile Include="Assets\Scripts\SpecialMoves\SuperJump.cs" />
     <Compile Include="Assets\Scripts\WinController.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
