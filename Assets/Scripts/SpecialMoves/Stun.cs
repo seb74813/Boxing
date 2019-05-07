@@ -2,17 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Stun : MonoBehaviour
+public class Stun : SpecialMoveBase
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private Transform firePoint;
+    [SerializeField] private GameObject electricBall;
 
-    // Update is called once per frame
-    void Update()
+    public override void Special()
     {
-        
+        Instantiate(electricBall, firePoint.position, firePoint.rotation);
     }
 }

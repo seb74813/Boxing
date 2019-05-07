@@ -13,7 +13,7 @@ public class PlayerBase : MonoBehaviour
     [SerializeField] private SpecialMoveBase specialMove;
 
     [Header("Movement Refrences")]
-    [SerializeField] private Rigidbody2D rigBody;
+    public Rigidbody2D rigBody;
     [SerializeField] private float recoilVelocity;
     [SerializeField] private float runSpeed = 40f;
     [SerializeField] private int player;
@@ -22,9 +22,9 @@ public class PlayerBase : MonoBehaviour
     [SerializeField] private string horizontal, up, special;
     [SerializeField] private float coolDown;
     [SerializeField] private Transform coolDownLoc;
-    [SerializeField] private GameObject coolDownEffect;
+    [SerializeField] private GameObject coolDownEffect, stunEffect;
     private bool cooledDown;
-    private float nextFireTime;
+    private float nextFireTime, stunTime;
 
 
     [Header("Health System")]
@@ -78,27 +78,30 @@ public class PlayerBase : MonoBehaviour
     private void Update()
     {
         #region "Player Controls"
-        horizontalMove = Input.GetAxisRaw(horizontal) * runSpeed;
-        animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
-        if (Input.GetButtonDown(up))
+        if (Time.time > stunTime)
         {
-            jump = true;
-            animator.SetBool("Jump", true);
-        }
-        if (Time.time > nextFireTime)
-        {
-            if (cooledDown == false)
+            horizontalMove = Input.GetAxisRaw(horizontal) * runSpeed;
+            animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
+            if (Input.GetButtonDown(up))
             {
-                Instantiate(coolDownEffect, coolDownLoc.position, coolDownLoc.rotation);
-                cooledDown = true;
+                jump = true;
+                animator.SetBool("Jump", true);
             }
-            if (Input.GetButtonDown(special))
+            if (Time.time > nextFireTime)
             {
-                specialMove.Special();
-                Debug.Log("Fired");
-                Debug.Log("Cool Down Count");
-                nextFireTime = Time.time + coolDown;
-                cooledDown = false;
+                if (cooledDown == false)
+                {
+                    Instantiate(coolDownEffect, coolDownLoc.position, coolDownLoc.rotation);
+                    cooledDown = true;
+                }
+                if (Input.GetButtonDown(special))
+                {
+                    specialMove.Special();
+                    Debug.Log("Fired");
+                    Debug.Log("Cool Down Count");
+                    nextFireTime = Time.time + coolDown;
+                    cooledDown = false;
+                }
             }
         }
         #endregion
@@ -113,6 +116,12 @@ public class PlayerBase : MonoBehaviour
     public void OnLanding()
     {
         animator.SetBool("Jump", false);
+    }
+
+    public void OnStun()
+    {
+        stunTime = Time.time + 5;
+        Instantiate(stunEffect, transform.position, transform.rotation);
     }
 
     private void Health()

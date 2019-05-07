@@ -225,6 +225,7 @@ MonoBehaviour:
   coolDownLoc: {fileID: 2691415467273118212}
   coolDownEffect: {fileID: 8100701104826642562, guid: ecda6971596992641b57cdd8f1455b8d,
     type: 3}
+  stunEffect: {fileID: 0}
   health: 3
   numOfHearts: 3
   hearts:
@@ -245,6 +246,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1fa4589c11a29e4d96597741e39e521, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb: {fileID: 2304479544517907700}
+  speed: 1180
 --- !u!1 &2304479544695859729
 GameObject:
   m_ObjectHideFlags: 0
