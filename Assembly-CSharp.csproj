@@ -73,9 +73,11 @@
     <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\PlayerBase.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\SpecialMoves\Dash.cs" />
     <Compile Include="Assets\Scripts\SpecialMoves\ElectricBallController.cs" />
     <Compile Include="Assets\Scripts\SpecialMoves\Fireball.cs" />
     <Compile Include="Assets\Scripts\SpecialMoves\FireballController.cs" />
+    <Compile Include="Assets\Scripts\SpecialMoves\Force.cs" />
     <Compile Include="Assets\Scripts\SpecialMoves\Gust.cs" />
     <Compile Include="Assets\Scripts\SpecialMoves\GustController.cs" />
     <Compile Include="Assets\Scripts\SpecialMoves\Magnet.cs" />

@@ -17,7 +17,7 @@ public class ElectricBallController : MonoBehaviour
     IEnumerator Idle()
     {
         yield return new WaitForSeconds(10);
-        Destroy(gameObject);
+        Destroy(this);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -25,9 +25,10 @@ public class ElectricBallController : MonoBehaviour
         PlayerBase enemyPlayer = collision.GetComponent<PlayerBase>();
         if (enemyPlayer != null)
         {
-            enemyPlayer.Hurt();
+            enemyPlayer.OnStun();
+            Destroy(this);
         }
 
-        Destroy(gameObject);
+        Destroy(this);
     }
 }

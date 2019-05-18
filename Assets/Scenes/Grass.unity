@@ -326,7 +326,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 171952832}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Platforms
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -341,7 +341,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 171952831}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.909016, y: -3.1252012, z: -0.00048828125}
+  m_LocalPosition: {x: -2.909016, y: -2.6, z: -0.00048828125}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1639847551}
@@ -367,7 +367,7 @@ GameObject:
   - component: {fileID: 339515599}
   - component: {fileID: 339515601}
   - component: {fileID: 339515600}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GrassBlock (10)
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -473,7 +473,7 @@ GameObject:
   - component: {fileID: 429720648}
   - component: {fileID: 429720649}
   - component: {fileID: 429720650}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DirtBlock (3)
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -579,7 +579,7 @@ GameObject:
   - component: {fileID: 457223070}
   - component: {fileID: 457223072}
   - component: {fileID: 457223071}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GrassBlock (9)
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -685,7 +685,7 @@ GameObject:
   - component: {fileID: 494932478}
   - component: {fileID: 494932479}
   - component: {fileID: 494932480}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DirtBlock (4)
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -826,6 +826,8 @@ MonoBehaviour:
   players:
   - {fileID: 3837624472638532916, guid: 8168fd1926fee1744a6939209eb41dd9, type: 3}
   - {fileID: 2304479544517907663, guid: 516c717c048fd974f9ca3adc1f53667e, type: 3}
+  - {fileID: 6238356745405877278, guid: 686bfe6da23e11a4abe666f56116fb38, type: 3}
+  - {fileID: 9080861544203009787, guid: 14a33e7688ead9743b645dd89e084fc1, type: 3}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -893,7 +895,7 @@ GameObject:
   - component: {fileID: 545995904}
   - component: {fileID: 545995906}
   - component: {fileID: 545995905}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DirtBlock (7)
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -1073,7 +1075,7 @@ GameObject:
   - component: {fileID: 598613499}
   - component: {fileID: 598613501}
   - component: {fileID: 598613500}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DirtBlock (6)
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -1180,7 +1182,7 @@ GameObject:
   - component: {fileID: 622435736}
   - component: {fileID: 622435735}
   - component: {fileID: 622435734}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GrassPlatform (8)
   m_TagString: Platform
   m_Icon: {fileID: 0}
@@ -1233,7 +1235,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 1
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.24569798}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1244,7 +1246,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 0.50860405}
   m_EdgeRadius: 0
 --- !u!212 &622435736
 SpriteRenderer:
@@ -1294,92 +1296,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &685457204
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 685457208}
-  - component: {fileID: 685457207}
-  - component: {fileID: 685457206}
-  - component: {fileID: 685457205}
-  m_Layer: 0
-  m_Name: Magnet
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &685457205
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 685457204}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d13064ac966b6cf4196bc7e6768d9787, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  circleColider: {fileID: 0}
-  startRad: 0
-  finalRad: 0
-  rad: 0
---- !u!58 &685457206
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 685457204}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
---- !u!50 &685457207
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 685457204}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!4 &685457208
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 685457204}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.9098091, y: 0.79627854, z: -11.821025}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &718322256
 GameObject:
   m_ObjectHideFlags: 0
@@ -1392,7 +1308,7 @@ GameObject:
   - component: {fileID: 718322260}
   - component: {fileID: 718322259}
   - component: {fileID: 718322258}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GrassPlatform (5)
   m_TagString: Platform
   m_Icon: {fileID: 0}
@@ -1445,7 +1361,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 1
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.24569845}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1456,7 +1372,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 0.5086031}
   m_EdgeRadius: 0
 --- !u!212 &718322260
 SpriteRenderer:
@@ -1518,7 +1434,7 @@ GameObject:
   - component: {fileID: 783527168}
   - component: {fileID: 783527167}
   - component: {fileID: 783527166}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GrassPlatform (7)
   m_TagString: Platform
   m_Icon: {fileID: 0}
@@ -1571,7 +1487,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 1
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.28079796}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1582,7 +1498,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 0.43840408}
   m_EdgeRadius: 0
 --- !u!212 &783527168
 SpriteRenderer:
@@ -1747,7 +1663,7 @@ GameObject:
   - component: {fileID: 791370168}
   - component: {fileID: 791370169}
   - component: {fileID: 791370170}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GrassBlock (4)
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -1853,7 +1769,7 @@ GameObject:
   - component: {fileID: 880742201}
   - component: {fileID: 880742203}
   - component: {fileID: 880742202}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DirtBlock (9)
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -1957,7 +1873,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 911524987}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Stage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2011,7 +1927,7 @@ GameObject:
   - component: {fileID: 962413654}
   - component: {fileID: 962413656}
   - component: {fileID: 962413655}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DirtBlock (5)
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -2118,7 +2034,7 @@ GameObject:
   - component: {fileID: 978683322}
   - component: {fileID: 978683324}
   - component: {fileID: 978683323}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GrassPlatform (2)
   m_TagString: Platform
   m_Icon: {fileID: 0}
@@ -2219,7 +2135,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 1
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.28079748}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2230,7 +2146,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 0.43840504}
   m_EdgeRadius: 0
 --- !u!1 &994728796
 GameObject:
@@ -2273,7 +2189,7 @@ GameObject:
   - component: {fileID: 999404068}
   - component: {fileID: 999404070}
   - component: {fileID: 999404069}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DirtBlock (10)
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -2379,7 +2295,7 @@ GameObject:
   - component: {fileID: 1086660438}
   - component: {fileID: 1086660439}
   - component: {fileID: 1086660440}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DirtBlock (1)
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -2485,7 +2401,7 @@ GameObject:
   - component: {fileID: 1087168760}
   - component: {fileID: 1087168762}
   - component: {fileID: 1087168761}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GrassBlock (5)
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -2666,7 +2582,7 @@ GameObject:
   - component: {fileID: 1137473447}
   - component: {fileID: 1137473446}
   - component: {fileID: 1137473445}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GrassPlatform (4)
   m_TagString: Platform
   m_Icon: {fileID: 0}
@@ -2719,7 +2635,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 1
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.26324797}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2730,7 +2646,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 0.47350407}
   m_EdgeRadius: 0
 --- !u!212 &1137473447
 SpriteRenderer:
@@ -2791,7 +2707,7 @@ GameObject:
   - component: {fileID: 1156909970}
   - component: {fileID: 1156909972}
   - component: {fileID: 1156909971}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GrassBlock (8)
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -2936,7 +2852,7 @@ GameObject:
   - component: {fileID: 1280180861}
   - component: {fileID: 1280180863}
   - component: {fileID: 1280180862}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GrassBlock (6)
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -3042,7 +2958,7 @@ GameObject:
   - component: {fileID: 1292892459}
   - component: {fileID: 1292892460}
   - component: {fileID: 1292892461}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GrassBlock (1)
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -3187,7 +3103,7 @@ GameObject:
   - component: {fileID: 1388651909}
   - component: {fileID: 1388651908}
   - component: {fileID: 1388651910}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GrassBlock
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -3294,7 +3210,7 @@ GameObject:
   - component: {fileID: 1411779239}
   - component: {fileID: 1411779238}
   - component: {fileID: 1411779237}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GrassPlatform (6)
   m_TagString: Platform
   m_Icon: {fileID: 0}
@@ -3347,7 +3263,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 1
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.28079796}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -3358,7 +3274,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 0.43840408}
   m_EdgeRadius: 0
 --- !u!212 &1411779239
 SpriteRenderer:
@@ -3564,7 +3480,7 @@ GameObject:
   - component: {fileID: 1639847550}
   - component: {fileID: 1639847553}
   - component: {fileID: 1639847552}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GrassPlatform
   m_TagString: Platform
   m_Icon: {fileID: 0}
@@ -3665,7 +3581,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 1
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.26324844}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -3676,7 +3592,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 0.4735031}
   m_EdgeRadius: 0
 --- !u!1 &1696358585
 GameObject:
@@ -3859,7 +3775,7 @@ GameObject:
   - component: {fileID: 1763592897}
   - component: {fileID: 1763592898}
   - component: {fileID: 1763592899}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GrassBlock (3)
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -3965,7 +3881,7 @@ GameObject:
   - component: {fileID: 1812860963}
   - component: {fileID: 1812860964}
   - component: {fileID: 1812860965}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GrassBlock (2)
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -4071,7 +3987,7 @@ GameObject:
   - component: {fileID: 1824647185}
   - component: {fileID: 1824647187}
   - component: {fileID: 1824647186}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GrassBlock (7)
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -4178,7 +4094,7 @@ GameObject:
   - component: {fileID: 1827897350}
   - component: {fileID: 1827897352}
   - component: {fileID: 1827897351}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GrassPlatform (1)
   m_TagString: Platform
   m_Icon: {fileID: 0}
@@ -4279,7 +4195,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 1
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.28079844}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -4290,7 +4206,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 0.43840313}
   m_EdgeRadius: 0
 --- !u!1 &1890318186
 GameObject:
@@ -4304,7 +4220,7 @@ GameObject:
   - component: {fileID: 1890318190}
   - component: {fileID: 1890318189}
   - component: {fileID: 1890318188}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GrassPlatform (3)
   m_TagString: Platform
   m_Icon: {fileID: 0}
@@ -4357,7 +4273,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 1
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.24569798}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -4368,7 +4284,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 0.50860405}
   m_EdgeRadius: 0
 --- !u!212 &1890318190
 SpriteRenderer:
@@ -4429,7 +4345,7 @@ GameObject:
   - component: {fileID: 1897724840}
   - component: {fileID: 1897724841}
   - component: {fileID: 1897724842}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DirtBlock (2)
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -4535,7 +4451,7 @@ GameObject:
   - component: {fileID: 1917041031}
   - component: {fileID: 1917041033}
   - component: {fileID: 1917041032}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DirtBlock (8)
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -4868,7 +4784,7 @@ GameObject:
   - component: {fileID: 2139713311}
   - component: {fileID: 2139713310}
   - component: {fileID: 2139713312}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: DirtBlock
   m_TagString: Floor
   m_Icon: {fileID: 0}

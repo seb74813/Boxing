@@ -106,8 +106,9 @@ public class CharacterSelection : MonoBehaviour
     {
         PlayerPrefs.SetString("Player1", characterList[selectedCharacterIndex].characterColor);
         PlayerPrefs.SetString("Player2", characterList2[selectedCharacterIndex2].characterColor);
-        SceneManager.LoadScene(stageList[selectedStageIndex].stageTitle);
         PlayerPrefs.Save();
+        SceneManager.LoadScene(stageList[selectedStageIndex].stageTitle);
+
     }
     #endregion
 

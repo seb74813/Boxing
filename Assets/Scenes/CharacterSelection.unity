@@ -984,11 +984,19 @@ MonoBehaviour:
     characterColor: Orange
   - characterSprite: {fileID: 21300000, guid: d346b3e98a651a045859b24d24d80fcd, type: 3}
     characterColor: Blue
+  - characterSprite: {fileID: 21300000, guid: 7cdea575fef76a6418b360db07791309, type: 3}
+    characterColor: Purple
+  - characterSprite: {fileID: 21300000, guid: a06b1e308e08580468c6b9fc31370dbf, type: 3}
+    characterColor: Green
   characterList2:
   - characterSprite: {fileID: 21300000, guid: 74db26a388d3ef64881520adf32d819b, type: 3}
     characterColor: Orange
   - characterSprite: {fileID: 21300000, guid: d346b3e98a651a045859b24d24d80fcd, type: 3}
     characterColor: Blue
+  - characterSprite: {fileID: 21300000, guid: 7cdea575fef76a6418b360db07791309, type: 3}
+    characterColor: Purple
+  - characterSprite: {fileID: 21300000, guid: a06b1e308e08580468c6b9fc31370dbf, type: 3}
+    characterColor: Green
   stageList:
   - stageSprite: {fileID: 21300000, guid: cb27c791fea19d34bb254875c3d82b5b, type: 3}
     stageTitle: Grass

@@ -38,6 +38,7 @@ Transform:
   - {fileID: 3837624473710636017}
   - {fileID: 1064065286039717457}
   - {fileID: 8438458138852577376}
+  - {fileID: 7131524456126766341}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -148,20 +149,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6bad2c89a3d40643a52a29fb5a3b8fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_JumpForce: 1050
+  m_JumpForce: 1200
   m_CrouchSpeed: 0.36
   m_MovementSmoothing: 0.035
   m_AirControl: 1
   m_WhatIsGround:
     serializedVersion: 2
     m_Bits: 4294966783
+  m_WhatIsPlatform:
+    serializedVersion: 2
+    m_Bits: 256
   m_GroundCheck: {fileID: 3837624473710636017}
+  platformCheck: {fileID: 7131524456126766341}
   m_CeilingCheck: {fileID: 3837624474119021650}
   m_CrouchDisableCollider: {fileID: 0}
   OnLandEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 3837624472638532914}
         m_MethodName: OnLanding
         m_Mode: 1
         m_Arguments:
@@ -214,7 +219,7 @@ MonoBehaviour:
   animator: {fileID: 3837624472638532915}
   specialMove: {fileID: 3837624472638532917}
   rigBody: {fileID: 0}
-  recoilVelocity: 1050
+  recoilVelocity: 1200
   runSpeed: 40
   player: 0
   horizontalMove: 0
@@ -222,10 +227,12 @@ MonoBehaviour:
   horizontal: 
   up: 
   special: 
+  down: 
   coolDown: 7
   coolDownLoc: {fileID: 8438458138852577376}
   coolDownEffect: {fileID: 8100701104826642562, guid: ecda6971596992641b57cdd8f1455b8d,
     type: 3}
+  stunEffect: {fileID: 0}
   health: 3
   numOfHearts: 3
   hearts:
@@ -333,11 +340,41 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4962528114767756491}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.79, y: -0.23, z: 0}
+  m_LocalPosition: {x: 0, y: 0.093, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3837624472638532877}
   m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6096883936750760287
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7131524456126766341}
+  m_Layer: 0
+  m_Name: PlatformCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7131524456126766341
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6096883936750760287}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.91, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3837624472638532877}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7291688895316944561
 GameObject:

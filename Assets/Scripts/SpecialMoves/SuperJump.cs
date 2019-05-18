@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SuperJump : SpecialMoveBase
 {
-
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private float speed;
 
@@ -12,5 +11,4 @@ public class SuperJump : SpecialMoveBase
     {
         rb.AddForce(new Vector2(0f, speed));
     }
-
 }
