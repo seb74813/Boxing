@@ -28,12 +28,17 @@ public class CharacterSelection : MonoBehaviour
     #endregion
 
     #region "Methods"
+    /// <summary>
+    /// Start method is used to run code when the scene is loaded
+    /// </summary>
     private void Start()
     {
-        //characterList = characterList2;
         UpdateCharacterSelectionUI();
     }
 
+    /// <summary>
+    /// UpdateCharacterSelectionUI method is used to update the UI elements on the character selection screen
+    /// </summary>
     private void UpdateCharacterSelectionUI()
     {
         characterIcon.sprite = characterList[selectedCharacterIndex].characterSprite;
@@ -45,6 +50,10 @@ public class CharacterSelection : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// LeftArrow method is run when the left arrow of a pressed. It changes the 
+    /// </summary>
+    /// <param name="player"></param>
     public void LeftArrow(int player)
     {
         if (player == 1)
