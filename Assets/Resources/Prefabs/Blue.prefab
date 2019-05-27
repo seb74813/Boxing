@@ -231,7 +231,8 @@ MonoBehaviour:
   coolDownLoc: {fileID: 2691415467273118212}
   coolDownEffect: {fileID: 8100701104826642562, guid: ecda6971596992641b57cdd8f1455b8d,
     type: 3}
-  stunEffect: {fileID: 0}
+  stunEffect: {fileID: 8973866531517615729, guid: 7a6f6d3c5b836ee4dbc0763b42c10b6c,
+    type: 3}
   health: 3
   numOfHearts: 3
   hearts:

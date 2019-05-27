@@ -85,6 +85,7 @@
     <Compile Include="Assets\Scripts\SpecialMoves\SpecialMoveBase.cs" />
     <Compile Include="Assets\Scripts\SpecialMoves\Stun.cs" />
     <Compile Include="Assets\Scripts\SpecialMoves\SuperJump.cs" />
+    <Compile Include="Assets\Scripts\StunEffectController.cs" />
     <Compile Include="Assets\Scripts\WinController.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />

@@ -8,9 +8,12 @@ MonoImporter:
   - animator: {instanceID: 0}
   - specialMove: {instanceID: 0}
   - rigBody: {instanceID: 0}
+  - coolDownLoc: {instanceID: 0}
+  - coolDownEffect: {instanceID: 0}
+  - stunEffect: {fileID: 8973866531517615729, guid: 7a6f6d3c5b836ee4dbc0763b42c10b6c,
+      type: 3}
   - fullHeart: {fileID: 21300000, guid: 657b45f1b0655984483d36dc51c6cbc6, type: 3}
   - emptyheart: {fileID: 21300000, guid: 0f70564c5f080034c9f6146dc25ae52e, type: 3}
-  - playerIcon: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
