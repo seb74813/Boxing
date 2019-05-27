@@ -980,9 +980,9 @@ MonoBehaviour:
   stageName: {fileID: 346970577}
   stageIcon: {fileID: 282137474}
   characterList:
-  - characterSprite: {fileID: 21300000, guid: 74db26a388d3ef64881520adf32d819b, type: 3}
+  - characterSprite: {fileID: 21300000, guid: 7f8324835ff72ba46b28fc397c340e1b, type: 3}
     characterColor: Orange
-  - characterSprite: {fileID: 21300000, guid: d346b3e98a651a045859b24d24d80fcd, type: 3}
+  - characterSprite: {fileID: 21300000, guid: fa5dc86be5f39a24893107617dd84fed, type: 3}
     characterColor: Blue
   - characterSprite: {fileID: 21300000, guid: 7cdea575fef76a6418b360db07791309, type: 3}
     characterColor: Purple
@@ -991,9 +991,9 @@ MonoBehaviour:
   - characterSprite: {fileID: 21300000, guid: a7cb950adafe61f4e8bc4e0a823810a1, type: 3}
     characterColor: Gray
   characterList2:
-  - characterSprite: {fileID: 21300000, guid: 74db26a388d3ef64881520adf32d819b, type: 3}
+  - characterSprite: {fileID: 21300000, guid: 7f8324835ff72ba46b28fc397c340e1b, type: 3}
     characterColor: Orange
-  - characterSprite: {fileID: 21300000, guid: d346b3e98a651a045859b24d24d80fcd, type: 3}
+  - characterSprite: {fileID: 21300000, guid: fa5dc86be5f39a24893107617dd84fed, type: 3}
     characterColor: Blue
   - characterSprite: {fileID: 21300000, guid: 7cdea575fef76a6418b360db07791309, type: 3}
     characterColor: Purple
