@@ -7,7 +7,6 @@ public class Dash : SpecialMoveBase
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private float speed;
     private CharacterController2D controller2D;
-    private Animator animator;
 
     public override void Special()
     {

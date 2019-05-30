@@ -6,6 +6,7 @@ public class Magnet : SpecialMoveBase
 {
     [SerializeField] private float speed, maxDist, countDown;
     [SerializeField] private GameObject[] players;
+    [SerializeField] private Animator animator;
     private float timer;
     private bool active;
 
@@ -14,12 +15,16 @@ public class Magnet : SpecialMoveBase
         players = GameObject.FindGameObjectsWithTag("Player");
         active = true;
         timer = Time.time + countDown;
+        animator.SetBool("Magnet" , true);
     }
 
     private void FixedUpdate()
     {
         if (Time.time > timer)
-        { active = false; }
+        { 
+            active = false;
+            animator.SetBool("Magnet", false);
+        }
 
         if (active)
         {

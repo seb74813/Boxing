@@ -164,6 +164,7 @@ MonoBehaviour:
   platformCheck: {fileID: 1175568172608297415}
   m_CeilingCheck: {fileID: 8123327735444037140}
   m_CrouchDisableCollider: {fileID: 0}
+  m_FacingRight: 1
   OnLandEvent:
     m_PersistentCalls:
       m_Calls:
@@ -287,6 +288,7 @@ MonoBehaviour:
   maxDist: 20
   countDown: 3
   players: []
+  animator: {fileID: 6238356745405877279}
 --- !u!1 &7005860977175498377
 GameObject:
   m_ObjectHideFlags: 0

@@ -301,6 +301,7 @@ MonoBehaviour:
   platformCheck: {fileID: 1978383186992456872}
   m_CeilingCheck: {fileID: 8084390053157615544}
   m_CrouchDisableCollider: {fileID: 0}
+  m_FacingRight: 1
   OnLandEvent:
     m_PersistentCalls:
       m_Calls:
@@ -375,3 +376,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 6805507796739284881}
   speed: 2000
+  animator: {fileID: 3241449858483154339}
