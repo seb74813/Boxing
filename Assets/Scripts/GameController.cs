@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -46,6 +47,8 @@ public class GameController : MonoBehaviour
             canCount = false;
             timerText.text = "0.0f";
             timer = 0.0f;
+            PlayerPrefs.SetInt("Winner", 3);
+            SceneManager.LoadScene("WinScreen");
         }
     }
 }

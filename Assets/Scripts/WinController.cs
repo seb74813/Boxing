@@ -11,6 +11,13 @@ public class WinController : MonoBehaviour
     void Start()
     {
         player = PlayerPrefs.GetInt("Winner");
-        winText.text = "Player " + player + " wins";
+        if (player == 1 || player == 2)
+        { 
+            winText.text = "Player " + player + " wins";
+        }
+        if (player == 3)
+        {
+            winText.text = "Timer ran out. Nobody wins";
+        }
     }
 }

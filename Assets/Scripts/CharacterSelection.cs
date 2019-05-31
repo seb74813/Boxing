@@ -113,10 +113,13 @@ public class CharacterSelection : MonoBehaviour
 
     public void Confirm()
     {
-        PlayerPrefs.SetString("Player1", characterList[selectedCharacterIndex].characterColor);
-        PlayerPrefs.SetString("Player2", characterList2[selectedCharacterIndex2].characterColor);
-        PlayerPrefs.Save();
-        SceneManager.LoadScene(stageList[selectedStageIndex].stageTitle);
+        if (selectedCharacterIndex != selectedCharacterIndex2)
+        {
+            PlayerPrefs.SetString("Player1", characterList[selectedCharacterIndex].characterColor);
+            PlayerPrefs.SetString("Player2", characterList2[selectedCharacterIndex2].characterColor);
+            PlayerPrefs.Save();
+            SceneManager.LoadScene(stageList[selectedStageIndex].stageTitle);
+        }
 
     }
     #endregion

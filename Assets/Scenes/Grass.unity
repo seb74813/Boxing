@@ -311,7 +311,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 147122669}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -6.21, z: 0}
+  m_LocalPosition: {x: 0, y: -8.99, z: 0}
   m_LocalScale: {x: 30, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -825,7 +825,7 @@ MonoBehaviour:
   spawn2: {fileID: 994728796}
   players:
   - {fileID: 3837624472638532916, guid: 8168fd1926fee1744a6939209eb41dd9, type: 3}
-  - {fileID: 2304479544517907663, guid: 516c717c048fd974f9ca3adc1f53667e, type: 3}
+  - {fileID: 1305678973240588782, guid: 516c717c048fd974f9ca3adc1f53667e, type: 3}
   - {fileID: 6238356745405877278, guid: 686bfe6da23e11a4abe666f56116fb38, type: 3}
   - {fileID: 9080861544203009787, guid: 14a33e7688ead9743b645dd89e084fc1, type: 3}
   - {fileID: 7175297233782735931, guid: b88c467474e75b340b02560a23ec6f59, type: 3}
@@ -880,7 +880,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.016999722, y: 0.13, z: -10}
+  m_LocalPosition: {x: -0.016999722, y: 0.13, z: -13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

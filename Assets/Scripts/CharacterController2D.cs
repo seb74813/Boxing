@@ -89,8 +89,8 @@ public class CharacterController2D : MonoBehaviour
         //Logic to check if there is a platform below character. If there is it will then set the box collider to trigger and start a timer
         if (down)
         {
-            boxCollider.isTrigger = true;
-            timer = Time.time + 0.15f;
+                boxCollider.isTrigger = true;
+                timer = Time.time + 0.125f;
         }
     }
 
