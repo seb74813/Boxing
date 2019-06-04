@@ -70,6 +70,7 @@
     <Compile Include="Assets\Scripts\CharacterController2D.cs" />
     <Compile Include="Assets\Scripts\CharacterSelection.cs" />
     <Compile Include="Assets\Scripts\CoolDownEffectController.cs" />
+    <Compile Include="Assets\Scripts\FreezeEffectContoller.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\PlayerBase.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
@@ -83,7 +84,10 @@
     <Compile Include="Assets\Scripts\SpecialMoves\Magnet.cs" />
     <Compile Include="Assets\Scripts\SpecialMoves\MagnetController.cs" />
     <Compile Include="Assets\Scripts\SpecialMoves\Push.cs" />
+    <Compile Include="Assets\Scripts\SpecialMoves\Snowball.cs" />
+    <Compile Include="Assets\Scripts\SpecialMoves\SnowflakeController.cs" />
     <Compile Include="Assets\Scripts\SpecialMoves\SpecialMoveBase.cs" />
+    <Compile Include="Assets\Scripts\SpecialMoves\Stomp.cs" />
     <Compile Include="Assets\Scripts\SpecialMoves\Stun.cs" />
     <Compile Include="Assets\Scripts\SpecialMoves\SuperJump.cs" />
     <Compile Include="Assets\Scripts\StunEffectController.cs" />

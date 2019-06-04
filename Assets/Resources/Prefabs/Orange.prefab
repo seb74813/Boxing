@@ -163,6 +163,9 @@ MonoBehaviour:
   platformCheck: {fileID: 7131524456126766341}
   m_CeilingCheck: {fileID: 3837624474119021650}
   m_CrouchDisableCollider: {fileID: 0}
+  m_Grounded: 0
+  m_FacingRight: 1
+  m_IsStun: 0
   OnLandEvent:
     m_PersistentCalls:
       m_Calls:
@@ -234,6 +237,9 @@ MonoBehaviour:
     type: 3}
   stunEffect: {fileID: 8973866531517615729, guid: 7a6f6d3c5b836ee4dbc0763b42c10b6c,
     type: 3}
+  freezeEffect: {fileID: 1664199806180063354, guid: c258fb18bc766c64680c7c0aba0676db,
+    type: 3}
+  slippery: {fileID: 0}
   health: 3
   numOfHearts: 3
   hearts:

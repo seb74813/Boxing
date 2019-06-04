@@ -22,9 +22,11 @@ public class PlayerBase : MonoBehaviour
     [SerializeField] private string horizontal, up, special, down;
     [SerializeField] private float coolDown;
     [SerializeField] private Transform coolDownLoc;
-    [SerializeField] private GameObject coolDownEffect, stunEffect;
-    private bool cooledDown;
+    [SerializeField] private GameObject coolDownEffect, stunEffect, freezeEffect;
+    private bool cooledDown, active;
     private float nextFireTime, stunTime;
+    private BoxCollider2D boxCollider;
+    [SerializeField] private PhysicsMaterial2D slippery;
 
 
     [Header("Health System")]
@@ -43,6 +45,7 @@ public class PlayerBase : MonoBehaviour
     {
         //This logic determines which player this is and sets the controls and health system
         SpriteRenderer playerSprite = GetComponent<SpriteRenderer>();
+        boxCollider = GetComponent<BoxCollider2D>();
         if ((PlayerPrefs.GetString("Player1") + "(Clone)") == this.name)
         {
             horizontal = "Horizontal";
@@ -145,6 +148,11 @@ public class PlayerBase : MonoBehaviour
             characterController2D.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
             jump = false;
         }
+        if (Time.time > stunTime && active == true)
+        {
+            boxCollider.sharedMaterial = slippery;
+            active = false;
+        }
     }
 
     /// <summary>
@@ -163,8 +171,16 @@ public class PlayerBase : MonoBehaviour
         stunTime = Time.time + 5;
         //This plays an effect which is shown when stunned
         Instantiate(stunEffect, transform.position, transform.rotation);
-        horizontalMove = 0;
+        characterController2D.m_IsStun = true;
+        boxCollider.sharedMaterial = null;
+        active = true;
+    }
 
+    public void OnFreeze()
+    {
+        stunTime = Time.time + 3;
+        Instantiate(freezeEffect, transform.position, transform.rotation);
+        characterController2D.m_IsStun = true;
     }
 
     /// <summary>

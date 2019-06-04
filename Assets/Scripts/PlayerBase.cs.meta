@@ -9,9 +9,13 @@ MonoImporter:
   - specialMove: {instanceID: 0}
   - rigBody: {instanceID: 0}
   - coolDownLoc: {instanceID: 0}
-  - coolDownEffect: {instanceID: 0}
+  - coolDownEffect: {fileID: 8100701104826642562, guid: ecda6971596992641b57cdd8f1455b8d,
+      type: 3}
   - stunEffect: {fileID: 8973866531517615729, guid: 7a6f6d3c5b836ee4dbc0763b42c10b6c,
       type: 3}
+  - freezeEffect: {fileID: 1664199806180063354, guid: c258fb18bc766c64680c7c0aba0676db,
+      type: 3}
+  - slippery: {instanceID: 0}
   - fullHeart: {fileID: 21300000, guid: 657b45f1b0655984483d36dc51c6cbc6, type: 3}
   - emptyheart: {fileID: 21300000, guid: 0f70564c5f080034c9f6146dc25ae52e, type: 3}
   executionOrder: 0
