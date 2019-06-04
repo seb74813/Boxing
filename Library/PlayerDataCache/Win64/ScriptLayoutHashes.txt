@@ -1,6 +1,6 @@
 Win64
 PlayerPath?
-C:/Users/sebas/Desktop/Boxing.exe
+C:/Users/sebas/Documents/Boxing/Boxing.exe
 SceneListBegin?
 Assets/Scenes/StartScreen.unity
 Assets/Scenes/CharacterSelection.unity

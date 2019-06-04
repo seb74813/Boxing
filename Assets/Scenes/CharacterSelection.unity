@@ -1011,7 +1011,7 @@ MonoBehaviour:
     characterColor: Orange
   - characterSprite: {fileID: 21300000, guid: 48ce6d81f6750d645ba6f68934fce6bd, type: 3}
     characterColor: Pink
-  - characterSprite: {fileID: 21300000, guid: 48ce6d81f6750d645ba6f68934fce6bd, type: 3}
+  - characterSprite: {fileID: 21300000, guid: 7cdea575fef76a6418b360db07791309, type: 3}
     characterColor: Purple
   - characterSprite: {fileID: 21300000, guid: c7f5c41a16b6ebb45bbf9411bddb4926, type: 3}
     characterColor: Red
