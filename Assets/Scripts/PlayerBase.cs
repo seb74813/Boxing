@@ -22,11 +22,14 @@ public class PlayerBase : MonoBehaviour
     [SerializeField] private string horizontal, up, special, down;
     [SerializeField] private float coolDown;
     [SerializeField] private Transform coolDownLoc;
-    [SerializeField] private GameObject coolDownEffect, stunEffect, freezeEffect;
+    [SerializeField] private GameObject coolDownEffect, stunEffect, freezeEffect, invincEffect;
     private bool cooledDown, active;
     private float nextFireTime, stunTime;
     private BoxCollider2D boxCollider;
-    [SerializeField] private PhysicsMaterial2D slippery;
+    private GameObject freezeEffectcurrent = null;
+    private GameObject stunEffectCurrent = null;
+    private GameObject invincEffectCurrent = null;
+    [SerializeField] private PhysicsMaterial2D slippery, stun;
 
 
     [Header("Health System")]
@@ -147,11 +150,22 @@ public class PlayerBase : MonoBehaviour
             //This uses the refrenced CharacterController2D script's method MOve to move the character
             characterController2D.Move(horizontalMove * Time.fixedDeltaTime, false, jump);
             jump = false;
+            if (freezeEffectcurrent != null)
+            {
+                freezeEffectcurrent.SetActive(false);
+            }
+            if (stunEffectCurrent != null)
+            {
+                boxCollider.sharedMaterial = slippery;
+                stunEffectCurrent.SetActive(false);
+            }
         }
-        if (Time.time > stunTime && active == true)
+        if (Time.time > nextHit)
         {
-            boxCollider.sharedMaterial = slippery;
-            active = false;
+            if (invincEffectCurrent != null)
+            {
+                invincEffectCurrent.SetActive(false);
+            }
         }
     }
 
@@ -170,16 +184,32 @@ public class PlayerBase : MonoBehaviour
     {
         stunTime = Time.time + 5;
         //This plays an effect which is shown when stunned
-        Instantiate(stunEffect, transform.position, transform.rotation);
+        if (stunEffectCurrent == null)
+        {
+            stunEffectCurrent = Instantiate(stunEffect, transform.position, transform.rotation);
+            stunEffectCurrent.transform.parent = gameObject.transform;
+        }
+        else if (stunEffectCurrent != null)
+        {
+            freezeEffectcurrent.SetActive(true);
+        }
         characterController2D.m_IsStun = true;
-        boxCollider.sharedMaterial = null;
-        active = true;
+        boxCollider.sharedMaterial = stun;
+        rigBody.velocity = new Vector2(0f, 0f);
     }
 
     public void OnFreeze()
     {
         stunTime = Time.time + 3;
-        Instantiate(freezeEffect, transform.position, transform.rotation);
+        if (freezeEffectcurrent == null)
+        {
+            freezeEffectcurrent = Instantiate(freezeEffect, transform.position, transform.rotation);
+            freezeEffectcurrent.transform.parent = gameObject.transform;
+        }
+        else if (freezeEffectcurrent != null)
+        {
+            freezeEffectcurrent.SetActive(true);
+        }
         characterController2D.m_IsStun = true;
     }
 
@@ -241,11 +271,24 @@ public class PlayerBase : MonoBehaviour
         //This set a timer to see when player can next be hurt
         if (Time.time > nextHit)
         {
+            if (invincEffectCurrent != null)
+            {
+                invincEffectCurrent.SetActive(false);
+            }
             //Lowers health and then plays Health method to display result
             health--;
             Health();
             //Starts timer
             nextHit = Time.time + 3;
+            if (invincEffectCurrent == null)
+            {
+                invincEffectCurrent = Instantiate(invincEffect, transform.position, transform.rotation);
+                invincEffectCurrent.transform.parent = gameObject.transform;
+            }
+            else if (invincEffectCurrent)
+            {
+                invincEffectCurrent.SetActive(true);
+            }
         }
     }
 

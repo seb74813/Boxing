@@ -168,12 +168,12 @@ public class CharacterController2D : MonoBehaviour
 
             if (m_IsStun == true)
             {
-                m_Rigidbody2D.velocity = new Vector3(0f, 0f, 0f);
+                m_Rigidbody2D.velocity = new Vector2(0f, 0f);
                 m_IsStun = false;
             }
 
-			// If the input is moving the player right and the player is facing left...
-			if (move > 0 && !m_FacingRight)
+            // If the input is moving the player right and the player is facing left...
+            if (move > 0 && !m_FacingRight)
 			{
 				// ... flip the player.
 				Flip();

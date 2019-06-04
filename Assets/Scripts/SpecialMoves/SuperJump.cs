@@ -9,6 +9,6 @@ public class SuperJump : SpecialMoveBase
 
     public override void Special()
     {
-        rb.AddForce(new Vector2(0f, speed));
+        rb.velocity = new Vector2(0f, speed);
     }
 }

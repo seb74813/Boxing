@@ -15,7 +15,8 @@ MonoImporter:
       type: 3}
   - freezeEffect: {fileID: 1664199806180063354, guid: c258fb18bc766c64680c7c0aba0676db,
       type: 3}
-  - slippery: {instanceID: 0}
+  - slippery: {fileID: 6200000, guid: 329b4c9a2b01c21489dd2fc8022e94b0, type: 2}
+  - stun: {fileID: 6200000, guid: d455be2b68479ad4283d30fa0865dc78, type: 2}
   - fullHeart: {fileID: 21300000, guid: 657b45f1b0655984483d36dc51c6cbc6, type: 3}
   - emptyheart: {fileID: 21300000, guid: 0f70564c5f080034c9f6146dc25ae52e, type: 3}
   executionOrder: 0

@@ -337,6 +337,12 @@ MonoBehaviour:
     type: 3}
   stunEffect: {fileID: 8973866531517615729, guid: 7a6f6d3c5b836ee4dbc0763b42c10b6c,
     type: 3}
+  freezeEffect: {fileID: 1664199806180063354, guid: c258fb18bc766c64680c7c0aba0676db,
+    type: 3}
+  invincEffect: {fileID: 1082959108728570312, guid: f599999018c946044ba3d89c5128ab35,
+    type: 3}
+  slippery: {fileID: 6200000, guid: a2caec235368b0b40b79625c6fb625a4, type: 2}
+  stun: {fileID: 6200000, guid: d455be2b68479ad4283d30fa0865dc78, type: 2}
   health: 3
   numOfHearts: 3
   hearts:
@@ -371,6 +377,9 @@ MonoBehaviour:
   platformCheck: {fileID: 6856395254728660415}
   m_CeilingCheck: {fileID: 3993471329480797161}
   m_CrouchDisableCollider: {fileID: 0}
+  m_Grounded: 0
+  m_FacingRight: 1
+  m_IsStun: 0
   OnLandEvent:
     m_PersistentCalls:
       m_Calls:

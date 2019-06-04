@@ -26,9 +26,9 @@ public class ElectricBallController : MonoBehaviour
         if (enemyPlayer != null)
         {
             enemyPlayer.OnStun();
-            Destroy(this);
+            Destroy(gameObject);
         }
 
-        Destroy(this);
+        Destroy(gameObject);
     }
 }
