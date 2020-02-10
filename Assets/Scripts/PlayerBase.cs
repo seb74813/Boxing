@@ -99,6 +99,8 @@ public class PlayerBase : MonoBehaviour
         //This stops the player from moving if they are stunned
         if (Time.time > stunTime)
         {
+            rigBody.constraints = RigidbodyConstraints2D.FreezeRotation;
+
             //This gets the direction of horizontal movement
             horizontalMove = Input.GetAxisRaw(horizontal) * runSpeed;
             //This sends the magnitude of horizontal movement to animator
@@ -193,7 +195,7 @@ public class PlayerBase : MonoBehaviour
         {
             freezeEffectcurrent.SetActive(true);
         }
-        characterController2D.m_IsStun = true;
+        rigBody.constraints = RigidbodyConstraints2D.FreezeAll;
         boxCollider.sharedMaterial = stun;
         rigBody.velocity = new Vector2(0f, 0f);
     }

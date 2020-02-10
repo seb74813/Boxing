@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class Snowball : SpecialMoveBase
 {
-    [SerializeField] private GameObject firePoint, effect;
+    [SerializeField] private Transform firePoint;
+    [SerializeField] private GameObject effect;
     public override void Special()
     {
-        Instantiate(effect , firePoint.transform);
+        Instantiate(effect , firePoint.position, firePoint.rotation);
     }
 }

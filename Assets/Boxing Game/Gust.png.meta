@@ -1,11 +1,15 @@
 fileFormatVersion: 2
 guid: 39d7771525ebf5c4ba40669e8e80192f
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: Gust_0
-    21300002: Gust_1
+  internalIDToNameTable:
+  - first:
+      213: 21300000
+    second: Gust_0
+  - first:
+      213: 21300002
+    second: Gust_1
   externalObjects: {}
-  serializedVersion: 9
+  serializedVersion: 10
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -60,7 +64,7 @@ TextureImporter:
   compressionQualitySet: 0
   textureFormatSet: 0
   platformSettings:
-  - serializedVersion: 2
+  - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -71,7 +75,8 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - serializedVersion: 2
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -82,6 +87,7 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -101,6 +107,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 0c74aaf4355bfab4c8b3fa4c42f2c36e
+      internalID: 21300000
       vertices: []
       indices: 
       edges: []
@@ -121,6 +128,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 2300d704a5bb3f54682f30b69a2093e2
+      internalID: 21300002
       vertices: []
       indices: 
       edges: []
@@ -129,10 +137,12 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 9252b82ab0d647d46ab8a145e5f45a2e
+    internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
+    secondaryTextures: []
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
